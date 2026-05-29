@@ -1,0 +1,117 @@
+<h2 class="sr-only">2026년 4월 24일부터 5월 20일까지 햇살 모닝페이지 20일치 분석. 핵심 키워드 빈도, 날짜별 감정 흐름, 주제별 비중, 글쓰기 시간 추이를 그래프로 보여줍니다.</h2>
+
+<div style="padding: 0.5rem 0;">
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-bottom: 2rem;">
+    <div style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 1rem;">
+      <p style="font-size: 13px; color: var(--color-text-secondary); margin: 0 0 4px;">기록한 날</p>
+      <p style="font-size: 24px; font-weight: 500; margin: 0;">20일</p>
+    </div>
+    <div style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 1rem;">
+      <p style="font-size: 13px; color: var(--color-text-secondary); margin: 0 0 4px;">평균 글쓰기</p>
+      <p style="font-size: 24px; font-weight: 500; margin: 0;">43분</p>
+    </div>
+    <div style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 1rem;">
+      <p style="font-size: 13px; color: var(--color-text-secondary); margin: 0 0 4px;">가장 잦은 화두</p>
+      <p style="font-size: 24px; font-weight: 500; margin: 0;">수면·불면</p>
+    </div>
+    <div style="background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 1rem;">
+      <p style="font-size: 13px; color: var(--color-text-secondary); margin: 0 0 4px;">변곡점</p>
+      <p style="font-size: 24px; font-weight: 500; margin: 0;">5/15→쉼</p>
+    </div>
+  </div>
+
+  <p style="font-size: 16px; font-weight: 500; margin: 0 0 4px;">반복되는 핵심 키워드</p>
+  <p style="font-size: 13px; color: var(--color-text-secondary); margin: 0 0 12px;">20일 중 해당 주제가 등장한 날의 수</p>
+  <div style="position: relative; width: 100%; height: 480px; margin-bottom: 2.5rem;">
+    <canvas id="kwChart" role="img" aria-label="핵심 키워드 빈도 가로 막대 차트. 수면·불면 18일, 신앙·기도·감사 17일, 일·사업·포근나루 16일, 독서·토론 15일, 글쓰기·몽롱쓰기 14일, 가족 13일, 죄책감·책임감 11일, AI·유튜브·콘텐츠 11일, 멘토·관계 9일, 돈·수익화 9일, 꿈 6일.">수면 18, 신앙 17, 일·사업 16, 독서 15, 글쓰기 14, 가족 13, 죄책감 11, AI 11, 멘토 9, 돈 9, 꿈 6.</canvas>
+  </div>
+
+  <p style="font-size: 16px; font-weight: 500; margin: 0 0 4px;">감정의 흐름</p>
+  <p style="font-size: 13px; color: var(--color-text-secondary); margin: 0 0 12px;">글을 읽고 매긴 정성적 해석 (0–10)</p>
+  <div style="display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 10px; font-size: 12px; color: var(--color-text-secondary);">
+    <span style="display: flex; align-items: center; gap: 5px;"><span style="width: 16px; height: 3px; background: #1D9E75;"></span>감사·기쁨</span>
+    <span style="display: flex; align-items: center; gap: 5px;"><span style="width: 16px; height: 0; border-top: 3px dashed #D85A30;"></span>피로·소진</span>
+    <span style="display: flex; align-items: center; gap: 5px;"><span style="width: 16px; height: 0; border-top: 3px dotted #7F77DD;"></span>성찰·다짐</span>
+  </div>
+  <div style="position: relative; width: 100%; height: 320px; margin-bottom: 2.5rem;">
+    <canvas id="emoChart" role="img" aria-label="날짜별 감정 흐름 선 그래프. 감사·기쁨, 피로·소진, 성찰·다짐 세 축이 4월 24일부터 5월 20일까지 변화. 피로는 5월 7일과 10일, 20일에 최고조에 달하고, 감사는 4월 28일과 5월 6일, 8일에 높으며, 성찰·다짐은 5월 8일과 15일, 20일에 가장 높습니다.">감정 세 축의 날짜별 추이.</canvas>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 1fr; gap: 2.5rem;">
+    <div>
+      <p style="font-size: 16px; font-weight: 500; margin: 0 0 4px;">글쓰기 시간 추이</p>
+      <p style="font-size: 13px; color: var(--color-text-secondary); margin: 0 0 12px;">하루 모닝페이지에 들인 시간 (분)</p>
+      <div style="position: relative; width: 100%; height: 300px;">
+        <canvas id="timeChart" role="img" aria-label="날짜별 글쓰기 시간 막대 차트. 4월 28일 70분으로 최고, 5월 8일 65분, 5월 7일 63분, 4월 25일 20분과 5월 10일 22분, 5월 20일 26분으로 최저. 평균 약 43분.">날짜별 글쓰기 시간.</canvas>
+      </div>
+    </div>
+
+    <div>
+      <p style="font-size: 16px; font-weight: 500; margin: 0 0 4px;">주제별 비중</p>
+      <p style="font-size: 13px; color: var(--color-text-secondary); margin: 0 0 12px;">기록 전체에서 각 주제가 차지한 비율</p>
+      <div id="topicLegend" style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 12px; font-size: 12px; color: var(--color-text-secondary);"></div>
+      <div style="position: relative; width: 100%; height: 280px;">
+        <canvas id="topicChart" role="img" aria-label="주제별 비중 도넛 차트. 신앙·영성 20퍼센트, 일·사업 19퍼센트, 건강·수면 18퍼센트, 독서·학습 15퍼센트, 글쓰기·창작 12퍼센트, 가족 10퍼센트, 관계·사회 6퍼센트.">신앙 20%, 일·사업 19%, 건강·수면 18%, 독서 15%, 글쓰기 12%, 가족 10%, 관계 6%.</canvas>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+(function(){
+  var isDark = matchMedia('(prefers-color-scheme: dark)').matches;
+  var tick = isDark ? '#B4B2A9' : '#5F5E5A';
+  var grid = isDark ? 'rgba(255,255,255,.08)' : 'rgba(0,0,0,.06)';
+  Chart.defaults.font.family = 'inherit';
+  Chart.defaults.color = tick;
+
+  var dates = ['4/24','4/25','4/26','4/27','4/28','4/29','4/30','5/1','5/4','5/5','5/6','5/7','5/8','5/10','5/11','5/12','5/13','5/14','5/15','5/20'];
+
+  new Chart(document.getElementById('kwChart'), {
+    type: 'bar',
+    data: {
+      labels: ['수면·불면','신앙·기도·감사','일·사업·포근나루','독서·토론','글쓰기·몽롱쓰기','가족(딸·남편·엄마)','죄책감·책임감','AI·유튜브·콘텐츠','멘토·관계','돈·수익화','꿈'],
+      datasets: [{ label: '등장 일수', data: [18,17,16,15,14,13,11,11,9,9,6], backgroundColor: '#1D9E75', borderRadius: 4 }]
+    },
+    options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false }, tooltip: { callbacks: { label: function(c){ return c.parsed.x + '일'; } } } },
+      scales: { x: { beginAtZero: true, max: 20, ticks: { color: tick, stepSize: 5 }, grid: { color: grid } },
+                y: { ticks: { color: tick, font: { size: 13 } }, grid: { display: false } } } }
+  });
+
+  new Chart(document.getElementById('emoChart'), {
+    type: 'line',
+    data: { labels: dates, datasets: [
+      { label: '감사·기쁨', data: [5,5,7,6,8,5,7,5,7,7,8,5,8,3,5,5,5,4,6,5], borderColor: '#1D9E75', backgroundColor: '#1D9E75', tension: 0.3, pointStyle: 'circle', pointRadius: 3 },
+      { label: '피로·소진', data: [6,5,7,5,6,8,5,6,4,5,6,9,6,10,8,7,8,8,7,9], borderColor: '#D85A30', backgroundColor: '#D85A30', borderDash: [6,4], tension: 0.3, pointStyle: 'triangle', pointRadius: 4 },
+      { label: '성찰·다짐', data: [7,7,6,8,8,6,8,7,7,6,7,6,9,7,7,6,6,6,9,9], borderColor: '#7F77DD', backgroundColor: '#7F77DD', borderDash: [2,3], tension: 0.3, pointStyle: 'rect', pointRadius: 3 }
+    ] },
+    options: { responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: { y: { beginAtZero: true, max: 10, ticks: { color: tick, stepSize: 2 }, grid: { color: grid } },
+                x: { ticks: { color: tick, font: { size: 10 }, autoSkip: false, maxRotation: 45 }, grid: { display: false } } } }
+  });
+
+  new Chart(document.getElementById('timeChart'), {
+    type: 'bar',
+    data: { labels: dates, datasets: [{ label: '분', data: [46.8,20.3,48,58,70,37.4,37,40.6,44.5,42,44.4,62.6,64.8,21.5,42.8,38.4,41.1,41.9,42.4,26], backgroundColor: '#378ADD', borderRadius: 4 }] },
+    options: { responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false }, tooltip: { callbacks: { label: function(c){ return Math.round(c.parsed.y) + '분'; } } } },
+      scales: { y: { beginAtZero: true, ticks: { color: tick, callback: function(v){ return v + '분'; } }, grid: { color: grid } },
+                x: { ticks: { color: tick, font: { size: 10 }, autoSkip: false, maxRotation: 45 }, grid: { display: false } } } }
+  });
+
+  var topicLabels = ['신앙·영성','일·사업','건강·수면','독서·학습','글쓰기·창작','가족','관계·사회'];
+  var topicData = [20,19,18,15,12,10,6];
+  var topicColors = ['#534AB7','#1D9E75','#D85A30','#378ADD','#D4537E','#BA7517','#888780'];
+  new Chart(document.getElementById('topicChart'), {
+    type: 'doughnut',
+    data: { labels: topicLabels, datasets: [{ data: topicData, backgroundColor: topicColors, borderWidth: 2, borderColor: isDark ? '#1a1a18' : '#fff' }] },
+    options: { responsive: true, maintainAspectRatio: false, cutout: '58%',
+      plugins: { legend: { display: false }, tooltip: { callbacks: { label: function(c){ return c.label + ' ' + c.parsed + '%'; } } } } }
+  });
+  var lg = document.getElementById('topicLegend');
+  lg.innerHTML = topicLabels.map(function(l,i){ return '<span style="display:flex;align-items:center;gap:5px;"><span style="width:10px;height:10px;border-radius:2px;background:'+topicColors[i]+';"></span>'+l+' '+topicData[i]+'%</span>'; }).join('');
+})();
+</script>
