@@ -19,14 +19,15 @@ index.html              # 회고 리포트 목록 페이지
 ## 회고 리포트 추가하는 법
 
 ### 1. 새 회고 HTML 파일 작성
-`YYYY-MM-DD-review.html` 형식으로 파일을 만듭니다.  
-(예: `2026-05-03-review.html`)
+`YYYY-MM-review.html` 형식으로 파일을 만듭니다.  
+두 달치를 묶을 경우 `YYYY-MM-MM-review.html`로 합니다.  
+(예: `2026-05-review.html` / `2026-04-05-review.html`)
 
 ### 2. index.html에 카드 추가
 `index.html` 안의 해당 월 `.month-block`에 아래 카드를 복사해 붙입니다.
 
 ```html
-<a class="report-card" href="YYYY-MM-DD-review.html">
+<a class="report-card" href="YYYY-MM-review.html">
   <div class="date-mark">
     <div class="date-day">DD</div>
     <div class="date-month">MON</div>
