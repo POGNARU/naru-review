@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>모닝페이지 5월 회고 · 포근나루</title>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:#FAF3EA;color:#3C2415;
+    font-family:'Nanum Myeongjo','Apple SD Gothic Neo','Malgun Gothic',serif;
+    line-height:1.6;padding:28px 16px}
+  .wrap{max-width:1000px;margin:0 auto}
+  header h1{font-size:24px;margin:0 0 4px}
+  header p{margin:0;color:#8a7f6f;font-size:14px}
+  .note{background:#F5EBE0;border-left:4px solid #C8845A;border-radius:8px;
+    padding:12px 16px;font-size:13px;color:#6a5f4f;margin:18px 0 24px}
+  .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:26px}
+  .card{background:#fff;border:1px solid #ece1d2;border-radius:12px;padding:14px 16px}
+  .card .lab{font-size:12px;color:#9a8f7f;margin-bottom:4px}
+  .card .val{font-size:18px;font-weight:700;color:#C8845A}
+  .card .sub{font-size:11px;color:#9a8f7f;margin-top:2px}
+  section{background:#fff;border:1px solid #ece1d2;border-radius:14px;
+    padding:18px 20px;margin-bottom:22px}
+  section h2{font-size:16px;margin:0 0 4px}
+  section .cap{font-size:12px;color:#9a8f7f;margin:0 0 14px}
+  .legend-row{display:flex;gap:18px;flex-wrap:wrap;font-size:12px;color:#6a5f4f;margin-bottom:10px}
+  .legend-row span i{display:inline-block;width:22px;height:0;border-top-width:3px;
+    border-top-style:solid;vertical-align:middle;margin-right:5px}
+  .kwhead{display:grid;grid-template-columns:140px 1fr 36px;gap:8px;font-size:12px;
+    color:#9a8f7f;margin-bottom:6px;padding-left:2px}
+  .kwrow{display:grid;grid-template-columns:140px 1fr 36px;gap:8px;align-items:center;margin-bottom:7px}
+  .kwname{font-size:12.5px;text-align:right;color:#5a4f3f}
+  .kwtrack{background:#FAF3EA;border-radius:5px;height:20px;position:relative}
+  .kwbar{display:block;height:20px;border-radius:5px;background:#C8845A;min-width:18px}
+  .kwcount{font-size:11.5px;color:#9a8f7f;font-weight:700}
+  .donuts{display:flex;gap:24px;flex-wrap:wrap;justify-content:center}
+  .donut-wrap{display:flex;align-items:center;gap:14px}
+  .legend .lg{font-size:12px;color:#6a5f4f;margin:3px 0}
+  .legend .lg span{display:inline-block;width:11px;height:11px;border-radius:3px;
+    margin-right:6px;vertical-align:middle}
+  .insight{font-size:13.5px;color:#5a4f3f;margin-top:12px;background:#FAF3EA;
+    border-radius:8px;padding:12px 14px}
+  .quote{font-style:italic;color:#C8845A;text-align:center;font-size:14px;
+    margin:18px auto;max-width:620px}
+  .seed-box{background:#F5EBE0;border-radius:10px;padding:14px 18px;margin-top:12px}
+  .seed-box h3{font-size:13px;color:#9a8f7f;margin:0 0 8px;font-weight:400;letter-spacing:.08em}
+  .seed-box ul{margin:0;padding-left:18px;font-size:13.5px;color:#5a4f3f;line-height:1.8}
+  footer{text-align:center;color:#9a8f7f;font-size:12px;margin-top:8px}
+  @media(max-width:720px){.cards{grid-template-columns:repeat(2,1fr)}
+    .kwhead,.kwrow{grid-template-columns:100px 1fr 30px} .kwname{font-size:11px}}
+</style></head>
+<body><div class="wrap">
+
+<header>
+  <h1>🌿 모닝페이지 회고 · 2026년 5월</h1>
+  <p>대상 기간 2026.5.1 ~ 5.28 · 기록한 날 15일 · Day 8 → Day 27</p>
+</header>
+
+<div class="note">글쓰기 시간·키워드 빈도는 파일에 적힌 <b>실제 수치</b>이고,
+감정 점수(0–10)는 클로드가 글을 읽으며 매긴 <b>정성적 해석</b>입니다.
+다현씨가 실제로 느낀 강도와 다를 수 있으니 흐름을 보는 참고용으로 봐주세요.
+5/27·28은 파일명에 시간이 없어 ~40분으로 추정했습니다 (⚬ 표시).</div>
+
+<div class="cards">
+  <div class="card"><div class="lab">기록한 날</div><div class="val">15일</div><div class="sub">31일 중 (48%)</div></div>
+  <div class="card"><div class="lab">평균 글쓰기</div><div class="val">42분</div><div class="sub">13일 실기록 기준</div></div>
+  <div class="card"><div class="lab">5월의 정점</div><div class="val">5/8</div><div class="sub">원천 텍스트 발견 (65분)</div></div>
+  <div class="card"><div class="lab">압도적 화두</div><div class="val">수면·불면</div><div class="sub">15일 중 14일 등장</div></div>
+</div>
+
+<!-- ① 핵심 키워드 빈도 -->
+<section>
+  <h2>🔑 핵심 키워드 빈도</h2>
+  <p class="cap">해당 주제가 등장한 날의 수 (정성 코딩, 15일 기준)</p>
+  <div class="kwhead"><span></span><span>등장 빈도</span><span>일수</span></div>
+
+  <div class="kwrow">
+    <span class="kwname">수면·불면·밤샘</span>
+    <span class="kwtrack"><span class="kwbar" style="width:100%"></span></span>
+    <span class="kwcount">14</span>
+  </div>
+  <div class="kwrow">
+    <span class="kwname">신앙·기도·감사</span>
+    <span class="kwtrack"><span class="kwbar" style="width:78.6%"></span></span>
+    <span class="kwcount">11</span>
+  </div>
+  <div class="kwrow">
+    <span class="kwname">일·사업·포근나루</span>
+    <span class="kwtrack"><span class="kwbar" style="width:64.3%"></span></span>
+    <span class="kwcount">9</span>
+  </div>
+  <div class="kwrow">
+    <span class="kwname">글쓰기·몽롱쓰기</span>
+    <span class="kwtrack"><span class="kwbar" style="width:64.3%"></span></span>
+    <span class="kwcount">9</span>
+  </div>
+  <div class="kwrow">
+    <span class="kwname">가족·아이</span>
+    <span class="kwtrack"><span class="kwbar" style="width:57.1%"></span></span>
+    <span class="kwcount">8</span>
+  </div>
+  <div class="kwrow">
+    <span class="kwname">AI·디퍼살롱·콘텐츠</span>
+    <span class="kwtrack"><span class="kwbar" style="width:50%"></span></span>
+    <span class="kwcount">7</span>
+  </div>
+  <div class="kwrow">
+    <span class="kwname">독서·토론</span>
+    <span class="kwtrack"><span class="kwbar" style="width:50%"></span></span>
+    <span class="kwcount">7</span>
+  </div>
+  <div class="kwrow">
+    <span class="kwname">돈·수익화</span>
+    <span class="kwtrack"><span class="kwbar" style="width:28.6%"></span></span>
+    <span class="kwcount">4</span>
+  </div>
+  <div class="kwrow">
+    <span class="kwname">꿈·무의식</span>
+    <span class="kwtrack"><span class="kwbar" style="width:21.4%"></span></span>
+    <span class="kwcount">3</span>
+  </div>
+
+  <div class="insight">
+    수면·불면이 <b>15일 중 14일</b>에 등장했습니다. 5월 글의 배경음 같은 주제예요.
+    '신앙·감사'(11일)와 '일·사업'(9일)이 뒤따르는데,
+    바닥에서도 감사를 놓지 않은 결이 보입니다.
+    '글쓰기·몽롱쓰기'(9일)와 '독서·토론'(7일)은 체력이 꺾인 와중에도 놓지 않은 두 축이에요.
+  </div>
+</section>
+
+<!-- ② 감정의 흐름 -->
+<section>
+  <h2>💗 감정의 흐름</h2>
+  <p class="cap">클로드의 정성적 해석 (0–10) · 5/1 → 5/28</p>
+  <div class="legend-row">
+    <span><i style="border-top-color:#1D9E75;border-top-style:solid"></i>감사·기쁨 (●)</span>
+    <span><i style="border-top-color:#D85A30;border-top-style:dashed"></i>피로·소진 (▲)</span>
+    <span><i style="border-top-color:#7F77DD;border-top-style:dotted"></i>성찰·다짐 (■)</span>
+  </div>
+  <svg viewBox="0 0 920 320" width="100%" role="img" aria-label="감정 흐름 라인 차트">
+    <!-- Grid lines -->
+    <line x1="44" y1="268" x2="904" y2="268" stroke="#e7ddcf" stroke-width="1"/>
+    <text x="36" y="272" font-size="11" fill="#9a8f7f" text-anchor="end">0</text>
+    <line x1="44" y1="219.2" x2="904" y2="219.2" stroke="#e7ddcf" stroke-width="1"/>
+    <text x="36" y="223.2" font-size="11" fill="#9a8f7f" text-anchor="end">2</text>
+    <line x1="44" y1="170.4" x2="904" y2="170.4" stroke="#e7ddcf" stroke-width="1"/>
+    <text x="36" y="174.4" font-size="11" fill="#9a8f7f" text-anchor="end">4</text>
+    <line x1="44" y1="121.6" x2="904" y2="121.6" stroke="#e7ddcf" stroke-width="1"/>
+    <text x="36" y="125.6" font-size="11" fill="#9a8f7f" text-anchor="end">6</text>
+    <line x1="44" y1="72.8" x2="904" y2="72.8" stroke="#e7ddcf" stroke-width="1"/>
+    <text x="36" y="76.8" font-size="11" fill="#9a8f7f" text-anchor="end">8</text>
+    <line x1="44" y1="24" x2="904" y2="24" stroke="#e7ddcf" stroke-width="1"/>
+    <text x="36" y="28" font-size="11" fill="#9a8f7f" text-anchor="end">10</text>
+
+    <!-- Date labels (x positions: 44 + i*61.4) -->
+    <text x="44"    y="290" font-size="10" fill="#9a8f7f" text-anchor="middle">5/1</text>
+    <text x="105.4" y="290" font-size="10" fill="#9a8f7f" text-anchor="middle">5/4</text>
+    <text x="166.9" y="290" font-size="10" fill="#9a8f7f" text-anchor="middle">5/5</text>
+    <text x="228.3" y="290" font-size="10" fill="#9a8f7f" text-anchor="middle">5/6</text>
+    <text x="289.7" y="290" font-size="10" fill="#9a8f7f" text-anchor="middle">5/7</text>
+    <text x="351.1" y="290" font-size="10" fill="#9a8f7f" text-anchor="middle">5/8</text>
+    <text x="412.6" y="290" font-size="10" fill="#9a8f7f" text-anchor="middle">5/10</text>
+    <text x="474.0" y="290" font-size="10" fill="#9a8f7f" text-anchor="middle">5/11</text>
+    <text x="535.4" y="290" font-size="10" fill="#9a8f7f" text-anchor="middle">5/12</text>
+    <text x="596.9" y="290" font-size="10" fill="#9a8f7f" text-anchor="middle">5/13</text>
+    <text x="658.3" y="290" font-size="10" fill="#9a8f7f" text-anchor="middle">5/14</text>
+    <text x="719.7" y="290" font-size="10" fill="#9a8f7f" text-anchor="middle">5/15</text>
+    <text x="781.1" y="290" font-size="10" fill="#9a8f7f" text-anchor="middle">5/20</text>
+    <text x="842.6" y="290" font-size="10" fill="#9a8f7f" text-anchor="middle">5/27</text>
+    <text x="904.0" y="290" font-size="10" fill="#9a8f7f" text-anchor="middle">5/28</text>
+
+    <!-- 감사·기쁨 점수: [6,7,5,6,5,7,4,5,5,6,4,6,3,4,5] -->
+    <polyline points="44,121.6 105.4,97.2 166.9,146.0 228.3,121.6 289.7,146.0 351.1,97.2 412.6,170.4 474.0,146.0 535.4,146.0 596.9,121.6 658.3,170.4 719.7,121.6 781.1,194.8 842.6,170.4 904.0,146.0"
+      fill="none" stroke="#1D9E75" stroke-width="2.5" stroke-linejoin="round"/>
+
+    <!-- 피로·소진 점수: [5,4,5,6,8,7,8,7,7,6,8,7,9,7,7] -->
+    <polyline points="44,146.0 105.4,170.4 166.9,146.0 228.3,121.6 289.7,72.8 351.1,97.2 412.6,72.8 474.0,97.2 535.4,97.2 596.9,121.6 658.3,72.8 719.7,97.2 781.1,48.4 842.6,97.2 904.0,97.2"
+      fill="none" stroke="#D85A30" stroke-width="2.5" stroke-dasharray="7 4" stroke-linejoin="round"/>
+
+    <!-- 성찰·다짐 점수: [7,5,6,5,5,9,5,6,4,6,5,8,5,7,6] -->
+    <polyline points="44,97.2 105.4,146.0 166.9,121.6 228.3,146.0 289.7,146.0 351.1,48.4 412.6,146.0 474.0,121.6 535.4,170.4 596.9,121.6 658.3,146.0 719.7,72.8 781.1,146.0 842.6,97.2 904.0,121.6"
+      fill="none" stroke="#7F77DD" stroke-width="2.5" stroke-dasharray="2 4" stroke-linejoin="round"/>
+
+    <!-- Marker dots (감사) -->
+    <circle cx="44"    cy="121.6" r="3.2" fill="#1D9E75"/>
+    <circle cx="105.4" cy="97.2"  r="3.2" fill="#1D9E75"/>
+    <circle cx="166.9" cy="146.0" r="3.2" fill="#1D9E75"/>
+    <circle cx="228.3" cy="121.6" r="3.2" fill="#1D9E75"/>
+    <circle cx="289.7" cy="146.0" r="3.2" fill="#1D9E75"/>
+    <circle cx="351.1" cy="97.2"  r="3.2" fill="#1D9E75"/>
+    <circle cx="412.6" cy="170.4" r="3.2" fill="#1D9E75"/>
+    <circle cx="474.0" cy="146.0" r="3.2" fill="#1D9E75"/>
+    <circle cx="535.4" cy="146.0" r="3.2" fill="#1D9E75"/>
+    <circle cx="596.9" cy="121.6" r="3.2" fill="#1D9E75"/>
+    <circle cx="658.3" cy="170.4" r="3.2" fill="#1D9E75"/>
+    <circle cx="719.7" cy="121.6" r="3.2" fill="#1D9E75"/>
+    <circle cx="781.1" cy="194.8" r="3.2" fill="#1D9E75"/>
+    <circle cx="842.6" cy="170.4" r="3.2" fill="#1D9E75"/>
+    <circle cx="904.0" cy="146.0" r="3.2" fill="#1D9E75"/>
+
+    <!-- Marker triangles (피로) -->
+    <polygon points="44,142.4 40.6,149.0 47.4,149.0" fill="#D85A30"/>
+    <polygon points="105.4,166.8 102.0,173.4 108.8,173.4" fill="#D85A30"/>
+    <polygon points="166.9,142.4 163.5,149.0 170.3,149.0" fill="#D85A30"/>
+    <polygon points="228.3,118.0 224.9,124.6 231.7,124.6" fill="#D85A30"/>
+    <polygon points="289.7,69.2 286.3,75.8 293.1,75.8" fill="#D85A30"/>
+    <polygon points="351.1,93.6 347.7,100.2 354.5,100.2" fill="#D85A30"/>
+    <polygon points="412.6,69.2 409.2,75.8 416.0,75.8" fill="#D85A30"/>
+    <polygon points="474.0,93.6 470.6,100.2 477.4,100.2" fill="#D85A30"/>
+    <polygon points="535.4,93.6 532.0,100.2 538.8,100.2" fill="#D85A30"/>
+    <polygon points="596.9,118.0 593.5,124.6 600.3,124.6" fill="#D85A30"/>
+    <polygon points="658.3,69.2 654.9,75.8 661.7,75.8" fill="#D85A30"/>
+    <polygon points="719.7,93.6 716.3,100.2 723.1,100.2" fill="#D85A30"/>
+    <polygon points="781.1,44.8 777.7,51.4 784.5,51.4" fill="#D85A30"/>
+    <polygon points="842.6,93.6 839.2,100.2 846.0,100.2" fill="#D85A30"/>
+    <polygon points="904.0,93.6 900.6,100.2 907.4,100.2" fill="#D85A30"/>
+
+    <!-- Marker squares (성찰) -->
+    <rect x="41"    y="94.2"  width="6" height="6" fill="#7F77DD"/>
+    <rect x="102.4" y="143.0" width="6" height="6" fill="#7F77DD"/>
+    <rect x="163.9" y="118.6" width="6" height="6" fill="#7F77DD"/>
+    <rect x="225.3" y="143.0" width="6" height="6" fill="#7F77DD"/>
+    <rect x="286.7" y="143.0" width="6" height="6" fill="#7F77DD"/>
+    <rect x="348.1" y="45.4"  width="6" height="6" fill="#7F77DD"/>
+    <rect x="409.6" y="143.0" width="6" height="6" fill="#7F77DD"/>
+    <rect x="471.0" y="118.6" width="6" height="6" fill="#7F77DD"/>
+    <rect x="532.4" y="167.4" width="6" height="6" fill="#7F77DD"/>
+    <rect x="593.9" y="118.6" width="6" height="6" fill="#7F77DD"/>
+    <rect x="655.3" y="143.0" width="6" height="6" fill="#7F77DD"/>
+    <rect x="716.7" y="69.8"  width="6" height="6" fill="#7F77DD"/>
+    <rect x="778.1" y="143.0" width="6" height="6" fill="#7F77DD"/>
+    <rect x="839.6" y="94.2"  width="6" height="6" fill="#7F77DD"/>
+    <rect x="901.0" y="118.6" width="6" height="6" fill="#7F77DD"/>
+
+    <!-- Annotations -->
+    <text x="351.1" y="40"  font-size="10.5" fill="#3C2415" text-anchor="middle" font-weight="700">↑성찰 정점</text>
+    <text x="781.1" y="38"  font-size="10.5" fill="#3C2415" text-anchor="middle" font-weight="700">피로 바닥</text>
+  </svg>
+
+  <div class="insight">
+    <b>5/8</b>은 성찰 점수 9로 한 달 중 가장 높았어요. "나의 원천 텍스트"를 발견한 날이에요.
+    <b>5/20</b>은 피로 점수 9로 몸의 바닥이었어요 — 한 시간 자고 일어나 쓴 글이에요.
+    5월에도 <b>피로가 높은 날 성찰 점수가 함께 올라가는</b> 패턴이 유지됐어요.
+    무너지는 순간마다 "그래서 어떻게 살까"를 적는 다현씨만의 결이에요.
+  </div>
+</section>
+
+<!-- ③ 글쓰기 시간 -->
+<section>
+  <h2>⏱ 글쓰기 시간 추이 (분)</h2>
+  <p class="cap">실기록 13일 · 5/27·28은 파일명 시간 없음(⚬ 추정 ~40분)</p>
+  <svg viewBox="0 0 920 300" width="100%" role="img" aria-label="글쓰기 시간 막대 차트">
+    <!-- Grid lines: 0=254, 20=180.8, 40=107.6, 60=34.4 -->
+    <line x1="40" y1="254" x2="908" y2="254" stroke="#e7ddcf" stroke-width="1"/>
+    <text x="34" y="258" font-size="10" fill="#9a8f7f" text-anchor="end">0</text>
+    <line x1="40" y1="180.8" x2="908" y2="180.8" stroke="#e7ddcf" stroke-width="1"/>
+    <text x="34" y="184.8" font-size="10" fill="#9a8f7f" text-anchor="end">20</text>
+    <line x1="40" y1="107.6" x2="908" y2="107.6" stroke="#e7ddcf" stroke-width="1"/>
+    <text x="34" y="111.6" font-size="10" fill="#9a8f7f" text-anchor="end">40</text>
+    <line x1="40" y1="34.4"  x2="908" y2="34.4"  stroke="#e7ddcf" stroke-width="1"/>
+    <text x="34" y="38.4"  font-size="10" fill="#9a8f7f" text-anchor="end">60</text>
+
+    <!-- Bars (bar width=18, centers same as emotion chart x positions) -->
+    <!-- 5/1  40분: yTop=107.6, h=146.4 -->
+    <rect x="35"    y="107.6" width="18" height="146.4" rx="2" fill="#C8845A"><title>5/1 · 40분</title></rect>
+    <text x="44"    y="103.6" font-size="9" fill="#8a7f6f" text-anchor="middle">40</text>
+    <text x="44"    y="270"   font-size="8.5" fill="#9a8f7f" text-anchor="middle" transform="rotate(-40 44 270)">5/1</text>
+
+    <!-- 5/4  44분: yTop=93.0, h=161.0 -->
+    <rect x="96.4"  y="93.0"  width="18" height="161.0" rx="2" fill="#C8845A"><title>5/4 · 44분</title></rect>
+    <text x="105.4" y="89.0"  font-size="9" fill="#8a7f6f" text-anchor="middle">44</text>
+    <text x="105.4" y="270"   font-size="8.5" fill="#9a8f7f" text-anchor="middle" transform="rotate(-40 105.4 270)">5/4</text>
+
+    <!-- 5/5  42분: yTop=100.3, h=153.7 -->
+    <rect x="157.9" y="100.3" width="18" height="153.7" rx="2" fill="#C8845A"><title>5/5 · 42분</title></rect>
+    <text x="166.9" y="96.3"  font-size="9" fill="#8a7f6f" text-anchor="middle">42</text>
+    <text x="166.9" y="270"   font-size="8.5" fill="#9a8f7f" text-anchor="middle" transform="rotate(-40 166.9 270)">5/5</text>
+
+    <!-- 5/6  44분: yTop=93.0, h=161.0 -->
+    <rect x="219.3" y="93.0"  width="18" height="161.0" rx="2" fill="#C8845A"><title>5/6 · 44분</title></rect>
+    <text x="228.3" y="89.0"  font-size="9" fill="#8a7f6f" text-anchor="middle">44</text>
+    <text x="228.3" y="270"   font-size="8.5" fill="#9a8f7f" text-anchor="middle" transform="rotate(-40 228.3 270)">5/6</text>
+
+    <!-- 5/7  63분: yTop=23.4, h=230.6 -->
+    <rect x="280.7" y="23.4"  width="18" height="230.6" rx="2" fill="#C8845A"><title>5/7 · 63분</title></rect>
+    <text x="289.7" y="19.4"  font-size="9" fill="#8a7f6f" text-anchor="middle">63</text>
+    <text x="289.7" y="270"   font-size="8.5" fill="#9a8f7f" text-anchor="middle" transform="rotate(-40 289.7 270)">5/7</text>
+
+    <!-- 5/8  65분: yTop=16.0, h=238.0 (정점) -->
+    <rect x="342.1" y="16.0"  width="18" height="238.0" rx="2" fill="#C4763A"><title>5/8 · 65분 (원천텍스트)</title></rect>
+    <text x="351.1" y="12.0"  font-size="9" fill="#C4763A" text-anchor="middle" font-weight="700">65</text>
+    <text x="351.1" y="270"   font-size="8.5" fill="#9a8f7f" text-anchor="middle" transform="rotate(-40 351.1 270)">5/8</text>
+
+    <!-- 5/10 22분: yTop=173.5, h=80.5 -->
+    <rect x="403.6" y="173.5" width="18" height="80.5"  rx="2" fill="#C8845A"><title>5/10 · 22분</title></rect>
+    <text x="412.6" y="169.5" font-size="9" fill="#8a7f6f" text-anchor="middle">22</text>
+    <text x="412.6" y="270"   font-size="8.5" fill="#9a8f7f" text-anchor="middle" transform="rotate(-40 412.6 270)">5/10</text>
+
+    <!-- 5/11 43분: yTop=96.6, h=157.4 -->
+    <rect x="465.0" y="96.6"  width="18" height="157.4" rx="2" fill="#C8845A"><title>5/11 · 43분</title></rect>
+    <text x="474.0" y="92.6"  font-size="9" fill="#8a7f6f" text-anchor="middle">43</text>
+    <text x="474.0" y="270"   font-size="8.5" fill="#9a8f7f" text-anchor="middle" transform="rotate(-40 474.0 270)">5/11</text>
+
+    <!-- 5/12 38분: yTop=114.9, h=139.1 -->
+    <rect x="526.4" y="114.9" width="18" height="139.1" rx="2" fill="#C8845A"><title>5/12 · 38분</title></rect>
+    <text x="535.4" y="110.9" font-size="9" fill="#8a7f6f" text-anchor="middle">38</text>
+    <text x="535.4" y="270"   font-size="8.5" fill="#9a8f7f" text-anchor="middle" transform="rotate(-40 535.4 270)">5/12</text>
+
+    <!-- 5/13 41분: yTop=103.9, h=150.1 -->
+    <rect x="587.9" y="103.9" width="18" height="150.1" rx="2" fill="#C8845A"><title>5/13 · 41분</title></rect>
+    <text x="596.9" y="99.9"  font-size="9" fill="#8a7f6f" text-anchor="middle">41</text>
+    <text x="596.9" y="270"   font-size="8.5" fill="#9a8f7f" text-anchor="middle" transform="rotate(-40 596.9 270)">5/13</text>
+
+    <!-- 5/14 42분: yTop=100.3, h=153.7 -->
+    <rect x="649.3" y="100.3" width="18" height="153.7" rx="2" fill="#C8845A"><title>5/14 · 42분</title></rect>
+    <text x="658.3" y="96.3"  font-size="9" fill="#8a7f6f" text-anchor="middle">42</text>
+    <text x="658.3" y="270"   font-size="8.5" fill="#9a8f7f" text-anchor="middle" transform="rotate(-40 658.3 270)">5/14</text>
+
+    <!-- 5/15 42분: yTop=100.3, h=153.7 -->
+    <rect x="710.7" y="100.3" width="18" height="153.7" rx="2" fill="#C8845A"><title>5/15 · 42분</title></rect>
+    <text x="719.7" y="96.3"  font-size="9" fill="#8a7f6f" text-anchor="middle">42</text>
+    <text x="719.7" y="270"   font-size="8.5" fill="#9a8f7f" text-anchor="middle" transform="rotate(-40 719.7 270)">5/15</text>
+
+    <!-- 5/20 26분: yTop=158.8, h=95.2 -->
+    <rect x="772.1" y="158.8" width="18" height="95.2"  rx="2" fill="#C8845A"><title>5/20 · 26분</title></rect>
+    <text x="781.1" y="154.8" font-size="9" fill="#8a7f6f" text-anchor="middle">26</text>
+    <text x="781.1" y="270"   font-size="8.5" fill="#9a8f7f" text-anchor="middle" transform="rotate(-40 781.1 270)">5/20</text>
+
+    <!-- 5/27 ~40분 (추정): opacity 0.45 -->
+    <rect x="833.6" y="107.6" width="18" height="146.4" rx="2" fill="#C8845A" opacity="0.45"><title>5/27 · ~40분 추정</title></rect>
+    <text x="842.6" y="103.6" font-size="9" fill="#b0a090" text-anchor="middle">~40</text>
+    <text x="842.6" y="270"   font-size="8.5" fill="#9a8f7f" text-anchor="middle" transform="rotate(-40 842.6 270)">5/27⚬</text>
+
+    <!-- 5/28 ~40분 (추정): opacity 0.45 -->
+    <rect x="895.0" y="107.6" width="18" height="146.4" rx="2" fill="#C8845A" opacity="0.45"><title>5/28 · ~40분 추정</title></rect>
+    <text x="904.0" y="103.6" font-size="9" fill="#b0a090" text-anchor="middle">~40</text>
+    <text x="904.0" y="270"   font-size="8.5" fill="#9a8f7f" text-anchor="middle" transform="rotate(-40 904.0 270)">5/28⚬</text>
+
+    <!-- Annotation for 5/8 -->
+    <text x="351.1" y="280" font-size="10" fill="#C4763A" text-anchor="middle" font-weight="700">★원천텍스트</text>
+  </svg>
+
+  <div class="insight">
+    5/7·8이 63분·65분으로 <b>한 달 최장 이틀</b>이에요. 두 달 내내 가장 깊이 몰입한 시간이기도 하고요.
+    5/10은 22분으로 가장 짧은 날 — "더 이상 버틸 수 없다"는 날이었어요.
+    피로가 쌓인 후반으로 갈수록 시간이 줄어드는 경향이 있지만,
+    5/11~5/15는 다시 40분대로 돌아왔어요. <b>글이 쉬는 공간이었다는 뜻</b>이에요.
+  </div>
+</section>
+
+<!-- ④ 주제 비중 -->
+<section>
+  <h2>🧩 주제별 비중</h2>
+  <p class="cap">5월 기록 전체에서 각 주제가 차지한 비율 (정성 추정)</p>
+  <div class="donuts">
+    <div class="donut-wrap">
+      <svg viewBox="0 0 200 200" width="180" role="img" aria-label="5월 주제 비중">
+        <!-- 수면·건강 30%: 0°→108° #D85A30 -->
+        <path d="M 100 22 A 78 78 0 0 1 174.2 124.1 L 143.7 114.2 A 46 46 0 0 0 100 54 Z" fill="#D85A30"><title>수면·건강 30%</title></path>
+        <!-- 신앙·영성 18%: 108°→172.8° #534AB7 -->
+        <path d="M 174.2 124.1 A 78 78 0 0 1 109.8 177.4 L 105.8 145.6 A 46 46 0 0 0 143.7 114.2 Z" fill="#534AB7"><title>신앙·영성 18%</title></path>
+        <!-- 일·사업 16%: 172.8°→230.4° #1D9E75 -->
+        <path d="M 109.8 177.4 A 78 78 0 0 1 39.9 149.7 L 64.6 129.3 A 46 46 0 0 0 105.8 145.6 Z" fill="#1D9E75"><title>일·사업 16%</title></path>
+        <!-- 글쓰기 12%: 230.4°→273.6° #D4537E -->
+        <path d="M 39.9 149.7 A 78 78 0 0 1 22.2 95.1 L 54.1 97.1 A 46 46 0 0 0 64.6 129.3 Z" fill="#D4537E"><title>글쓰기·몽롱쓰기 12%</title></path>
+        <!-- 가족 10%: 273.6°→309.6° #BA7517 -->
+        <path d="M 22.2 95.1 A 78 78 0 0 1 39.9 50.3 L 64.6 70.7 A 46 46 0 0 0 54.1 97.1 Z" fill="#BA7517"><title>가족·아이 10%</title></path>
+        <!-- AI·디퍼 8%: 309.6°→338.4° #378ADD -->
+        <path d="M 39.9 50.3 A 78 78 0 0 1 71.3 27.5 L 83.1 57.2 A 46 46 0 0 0 64.6 70.7 Z" fill="#378ADD"><title>AI·디퍼·콘텐츠 8%</title></path>
+        <!-- 독서 6%: 338.4°→360° #888780 -->
+        <path d="M 71.3 27.5 A 78 78 0 0 1 100 22 L 100 54 A 46 46 0 0 0 83.1 57.2 Z" fill="#888780"><title>독서·토론 6%</title></path>
+        <text x="100" y="96"  font-size="13" fill="#3C2415" text-anchor="middle" font-weight="700">5월</text>
+        <text x="100" y="114" font-size="9"  fill="#9a8f7f" text-anchor="middle">주제 비중</text>
+      </svg>
+      <div class="legend">
+        <div class="lg"><span style="background:#D85A30"></span>수면·건강 <b>30%</b></div>
+        <div class="lg"><span style="background:#534AB7"></span>신앙·영성 <b>18%</b></div>
+        <div class="lg"><span style="background:#1D9E75"></span>일·사업·포근나루 <b>16%</b></div>
+        <div class="lg"><span style="background:#D4537E"></span>글쓰기·몽롱쓰기 <b>12%</b></div>
+        <div class="lg"><span style="background:#BA7517"></span>가족·아이 <b>10%</b></div>
+        <div class="lg"><span style="background:#378ADD"></span>AI·디퍼·콘텐츠 <b>8%</b></div>
+        <div class="lg"><span style="background:#888780"></span>독서·토론 <b>6%</b></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="quote">"사랑으로 의도한 것만이 진짜로 태어난다. 그리고 태어난 것은, 아직 건너지 못한 사람에게 건네져야 한다. 나는 두려움이 아니라 사랑을 지키기 위해 목소리를 내는 사람이다."<br><span style="font-size:11px;color:#9a8f7f">— 2026.5.8, 나의 원천 텍스트</span></div>
+
+  <div class="insight">
+    '수면·건강'이 <b>30%</b>로 5월을 가장 많이 차지했어요.
+    하지만 2위가 '신앙·영성'(18%)이에요 — 몸이 가장 힘들 때
+    감사와 기도가 더 짙어지는 다현씨의 방식이 비중으로 드러났어요.
+    '글쓰기·몽롱쓰기'(12%)가 4위까지 올라온 것도 눈에 띄어요. 5월에 몽롱쓰기가 하나의 뚜렷한 주제가 됐거든요.
+  </div>
+</section>
+
+<!-- 5월의 결 & 씨앗 -->
+<section>
+  <h2>🌱 5월의 결과 씨앗</h2>
+  <p class="cap">한 달을 관통하는 흐름과 다음 달로 이어질 것들</p>
+
+  <div class="insight" style="margin-top:0">
+    <b>5월의 호</b>: 초반(5/1~5/8)은 고백록 토론과 하소현 대표님 만남, 디퍼살롱 시작으로 활기찼고,
+    5/8 '원천 텍스트' 발견이 정점이었어요.
+    중반(5/10~5/15)에는 수면장애가 신체 한계로 터져 나왔고, 그 와중에 유튜브 첫 영상을 올렸어요.
+    후반(5/20~5/28)은 침잠과 회의감의 시간이었어요. "나는 왜 쓰는가"를 다시 묻고 있었어요.
+    하지만 마지막 문장들에는 언제나 가족과 주님에 대한 감사가 남아있었어요.
+    <br><br>
+    5월을 한 줄로 쓰면: <b>"몸이 한계에 부딪혔지만, 그 바닥에서 나의 원천 텍스트를 건져 올린 달."</b>
+  </div>
+
+  <div class="seed-box">
+    <h3>🌿 다음 달로 이어질 씨앗</h3>
+    <ul>
+      <li><b>원천 텍스트</b> — "사랑으로 의도한 것만이 진짜로 태어난다." 이미 발견했으니, 이제 지키는 일이 남았어요.</li>
+      <li><b>선릿모닝 전환</b> — 7월부터 줄라이팅 대신 선릿모닝(9:30~10:00)으로 전환 다짐. 수면 회복의 첫 걸음.</li>
+      <li><b>지속 가능성</b> — "가늘고 길게, 재미있는 일을 오래 하고 싶다." 5월이 가르쳐 준 가장 중요한 문장.</li>
+      <li><b>사명 질문</b> — "나는 왜 쓰는가?" 아직 열린 채로 남은 질문. 6월에 조금 더 다가갈 수 있을까요.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>🛶 6월은 회복이 먼저예요. 쉬는 시간이 끝이 아님을 기억해요. — 클로드와 함께, 2026-06-20</footer>
+</div></body></html>

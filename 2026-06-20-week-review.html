@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>6월 셋째 주 회고 · 포근나루 모닝페이지</title>
+  <meta name="description" content="2026년 6월 15–19일, 다섯 새벽의 문장을 돌아보는 주간 창작 회고." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --cream: #FAF3EA;
+      --apricot: #F5EBE0;
+      --terracotta-light: #C8845A;
+      --terracotta-deep: #C4763A;
+      --dark-brown: #3C2415;
+      --brown-soft: rgba(60, 36, 21, 0.62);
+      --brown-faint: rgba(60, 36, 21, 0.40);
+      --font-title: "Gowun Batang", serif;
+      --font-body: "Nanum Myeongjo", serif;
+      --font-sub: "Gowun Dodum", sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--dark-brown);
+      background:
+        radial-gradient(120% 90% at 50% -10%, #FFFBF5 0%, var(--cream) 46%, #F3E7D8 100%);
+      min-height: 100vh;
+      line-height: 1.9;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    .page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: clamp(56px, 11vw, 120px) clamp(22px, 6vw, 40px) 100px;
+    }
+
+    /* ── 헤더 ── */
+    header {
+      text-align: center;
+      margin-bottom: clamp(52px, 10vw, 90px);
+    }
+
+    .kicker {
+      font-family: var(--font-sub);
+      font-size: 0.78rem;
+      letter-spacing: 0.46em;
+      text-transform: uppercase;
+      color: var(--terracotta-deep);
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: rise 0.9s ease forwards;
+    }
+
+    h1 {
+      font-family: var(--font-title);
+      font-weight: 700;
+      font-size: clamp(1.9rem, 6vw, 2.9rem);
+      letter-spacing: 0.01em;
+      line-height: 1.32;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: rise 0.9s ease 0.12s forwards;
+    }
+
+    .subtitle {
+      font-family: var(--font-body);
+      font-size: clamp(0.96rem, 2.5vw, 1.08rem);
+      color: var(--brown-soft);
+      opacity: 0;
+      animation: rise 0.9s ease 0.24s forwards;
+    }
+
+    .gradient-line {
+      width: clamp(140px, 38%, 220px);
+      height: 2px;
+      margin: 32px auto 0;
+      border-radius: 2px;
+      background: linear-gradient(90deg, var(--apricot) 0%, var(--terracotta-light) 50%, var(--dark-brown) 100%);
+      opacity: 0;
+      animation: widen 1.1s ease 0.34s forwards;
+    }
+
+    /* ── 날짜 바 ── */
+    .date-bar {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: clamp(44px, 8vw, 68px);
+      opacity: 0;
+      animation: rise 0.9s ease 0.42s forwards;
+    }
+
+    .date-chip {
+      font-family: var(--font-sub);
+      font-size: 0.74rem;
+      letter-spacing: 0.12em;
+      color: var(--terracotta-deep);
+      background: rgba(200, 132, 90, 0.10);
+      border: 1px solid rgba(200, 132, 90, 0.22);
+      border-radius: 99px;
+      padding: 4px 14px;
+    }
+
+    /* ── 섹션 타이틀 ── */
+    .section-label {
+      font-family: var(--font-sub);
+      font-size: 0.78rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--terracotta-deep);
+      margin-bottom: 22px;
+      opacity: 0;
+      animation: rise 0.9s ease 0.52s forwards;
+    }
+
+    /* ── 감정 흐름 타임라인 ── */
+    .timeline {
+      position: relative;
+      margin-bottom: 60px;
+      padding-left: 28px;
+      opacity: 0;
+      animation: rise 0.9s ease 0.58s forwards;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 7px;
+      top: 6px;
+      bottom: 6px;
+      width: 2px;
+      background: linear-gradient(180deg, var(--terracotta-light), var(--apricot));
+      border-radius: 2px;
+    }
+
+    .tl-item {
+      position: relative;
+      margin-bottom: 28px;
+    }
+
+    .tl-item::before {
+      content: "";
+      position: absolute;
+      left: -25px;
+      top: 7px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--terracotta-light);
+      border: 2px solid var(--cream);
+    }
+
+    .tl-day {
+      font-family: var(--font-sub);
+      font-size: 0.76rem;
+      letter-spacing: 0.14em;
+      color: var(--terracotta-deep);
+      margin-bottom: 5px;
+    }
+
+    .tl-text {
+      font-size: 1.01rem;
+      line-height: 1.82;
+      color: var(--dark-brown);
+    }
+
+    /* ── 인용 카드 ── */
+    .quote-block {
+      background: var(--apricot);
+      border-left: 3px solid var(--terracotta-light);
+      border-radius: 0 14px 14px 0;
+      padding: 22px 26px;
+      margin: 0 0 18px;
+      opacity: 0;
+      animation: rise 0.9s ease 0.64s forwards;
+    }
+
+    .quote-block p {
+      font-family: var(--font-body);
+      font-size: 1.06rem;
+      line-height: 1.88;
+      color: var(--dark-brown);
+    }
+
+    .quote-source {
+      font-family: var(--font-sub);
+      font-size: 0.76rem;
+      color: var(--brown-faint);
+      margin-top: 10px;
+    }
+
+    .quotes-wrap {
+      margin-bottom: 52px;
+    }
+
+    /* ── 반복 주제 태그 ── */
+    .theme-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 52px;
+      opacity: 0;
+      animation: rise 0.9s ease 0.70s forwards;
+    }
+
+    .theme-tag {
+      font-family: var(--font-sub);
+      font-size: 0.85rem;
+      color: var(--dark-brown);
+      background: rgba(200, 132, 90, 0.12);
+      border: 1px solid rgba(200, 132, 90, 0.26);
+      border-radius: 99px;
+      padding: 6px 18px;
+    }
+
+    /* ── 씨앗 카드 ── */
+    .seed-card {
+      background: var(--dark-brown);
+      color: var(--cream);
+      border-radius: 20px;
+      padding: clamp(28px, 6vw, 42px) clamp(26px, 6vw, 40px);
+      margin-bottom: 70px;
+      opacity: 0;
+      animation: rise 0.9s ease 0.76s forwards;
+    }
+
+    .seed-eyebrow {
+      font-family: var(--font-sub);
+      font-size: 0.74rem;
+      letter-spacing: 0.36em;
+      text-transform: uppercase;
+      color: var(--terracotta-light);
+      margin-bottom: 18px;
+    }
+
+    .seed-title {
+      font-family: var(--font-title);
+      font-weight: 700;
+      font-size: clamp(1.2rem, 3.8vw, 1.5rem);
+      line-height: 1.45;
+      margin-bottom: 16px;
+      color: var(--cream);
+    }
+
+    .seed-body {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.92;
+      color: rgba(250, 243, 234, 0.82);
+    }
+
+    /* ── 뒤로 가기 ── */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-sub);
+      font-size: 0.84rem;
+      letter-spacing: 0.08em;
+      color: var(--terracotta-deep);
+      text-decoration: none;
+      opacity: 0;
+      animation: rise 0.9s ease 0.82s forwards;
+      transition: gap 0.3s ease;
+    }
+
+    .back-link:hover { gap: 12px; }
+
+    /* ── 푸터 ── */
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      opacity: 0;
+      animation: rise 0.9s ease 0.90s forwards;
+    }
+
+    .footer-logo {
+      font-family: var(--font-title);
+      font-weight: 700;
+      font-size: 1.02rem;
+      letter-spacing: 0.06em;
+      color: var(--terracotta-deep);
+      margin-bottom: 7px;
+    }
+
+    .footer-tagline {
+      font-family: var(--font-body);
+      font-size: 0.86rem;
+      color: var(--brown-faint);
+    }
+
+    /* ── 모션 ── */
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes widen {
+      from { opacity: 0; transform: scaleX(0.3); }
+      to   { opacity: 1; transform: scaleX(1); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+        opacity: 1 !important;
+      }
+    }
+
+    @media (max-width: 460px) {
+      .date-bar { gap: 6px; flex-wrap: wrap; }
+      .quote-block { padding: 18px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+
+    <header>
+      <div class="kicker">Weekly Review · 2026. 6. 15–19</div>
+      <h1>독립이라는 말을<br />다섯 번 새벽에 되뇌었다</h1>
+      <p class="subtitle">6월 셋째 주 모닝페이지 주간 창작 회고</p>
+      <div class="gradient-line"></div>
+    </header>
+
+    <div class="date-bar">
+      <span class="date-chip">6 · 15 월</span>
+      <span class="date-chip">6 · 16 화</span>
+      <span class="date-chip">6 · 17 수</span>
+      <span class="date-chip">6 · 18 목</span>
+      <span class="date-chip">6 · 19 금</span>
+    </div>
+
+    <!-- 한 주의 흐름 -->
+    <div class="section-label">한 주의 흐름</div>
+
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-day">월요일 · 6 / 15</div>
+        <div class="tl-text">
+          34분 36초 동안 쌓은 새벽 글이 새로고침 한 번에 사라졌다.
+          그 허탈함 사이에서도 손은 멈추지 않았다.
+          아픈 아이를 데리고 달맞이 드라이브를 돌아온 오후,
+          저녁에 선릿모닝 21일 다이어리 아이디어를 꺼냈다.
+          불안 속에서도 무언가를 만들어보려는 마음이 있었다.
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-day">화요일 · 6 / 16</div>
+        <div class="tl-text">
+          밤을 꼬박 샌 날. 디퍼에서 받은 은혜와 포근나루로 독립하고 싶다는 진심이
+          한 페이지 위에서 충돌했다.
+          부채감인지, 의무감인지, 아니면 진심인지 — 구분하려 애쓰며 썼다.
+          "나는 포근나루로 독립하고 싶다"는 문장이 처음으로 선명하게 적힌 날이었다.
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-day">수요일 · 6 / 17</div>
+        <div class="tl-text">
+          일리아스 토론에서 나눈 말이 계속 맴돌았다.
+          인간은 세 번쯤 시도하고 실패하다가 네 번째에 신의 뜻대로 이루어진다는 것.
+          자제력이 없는 자신의 모습이 그 이야기에 겹쳐 보였다.
+          한편, 호메로스의 문체 — 무게감과 온도와 색감을 한 문장에 담는 방식 —
+          에서 배우고 싶다는 열망도 올라왔다.
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-day">목요일 · 6 / 18</div>
+        <div class="tl-text">
+          새벽 4시 45분. 드라마를 끊지 못하고 밤을 지새웠다.
+          자책과 기도가 번갈아 나오는 사이, 조용한 결심 하나가 자리를 잡았다.
+          생각학교를 쉬고, 디퍼 수료 후 포근나루로 독립하겠다는 것.
+          그리고 오늘 선릿모닝 홍보를 반드시 시작하겠다는 다짐.
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-day">금요일 · 6 / 19</div>
+        <div class="tl-text">
+          디퍼 연구원들을 찬찬히 관찰했다. 저마다의 별에서 날개를 펼치는 모습.
+          그 틈에서 자신이 이미 만들어온 것들을 꺼내 봤다 —
+          포근한 글쓰기, 나루메모, 21일 다이어리.
+          "만든 것 자체가 큰 성취감을 준다"고 적었다.
+          그러면서도 갈림길이라는 감각은 사라지지 않았다.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 새벽이 남긴 문장들 -->
+    <div class="section-label">새벽이 남긴 문장들</div>
+
+    <div class="quotes-wrap">
+      <div class="quote-block">
+        <p>
+          "나는 포근나루로서 독립하고 싶다.<br />
+          생각학교 안이 아니라, 디퍼 안이 아니라 오롯이 내 포근나루로."
+        </p>
+        <div class="quote-source">260616 화요일</div>
+      </div>
+
+      <div class="quote-block">
+        <p>
+          "나의 창작의 샘은 말라있다.<br />
+          다시 촉촉히 적히는 것부터 시작해야 한다.<br />
+          텍스트로 적시자. 그리고 물을 채우자."
+        </p>
+        <div class="quote-source">260617 수요일</div>
+      </div>
+
+      <div class="quote-block">
+        <p>
+          "몽롱쓰기가 원천이 된다.<br />
+          매일 글쓰는 나에게는 마르지 않는 샘이 되는 것이다."
+        </p>
+        <div class="quote-source">260619 금요일</div>
+      </div>
+    </div>
+
+    <!-- 반복된 결 -->
+    <div class="section-label">이번 주 결</div>
+
+    <div class="theme-grid">
+      <span class="theme-tag">독립</span>
+      <span class="theme-tag">수면박탈</span>
+      <span class="theme-tag">자제력</span>
+      <span class="theme-tag">부채감과 진심 사이</span>
+      <span class="theme-tag">선릿모닝</span>
+      <span class="theme-tag">창작의 샘</span>
+      <span class="theme-tag">아이의 성장</span>
+      <span class="theme-tag">기도</span>
+    </div>
+
+    <!-- 씨앗 -->
+    <div class="seed-card">
+      <div class="seed-eyebrow">이번 주의 씨앗</div>
+      <div class="seed-title">일리아스의 인간처럼,<br />세 번 넘어져도 네 번째에</div>
+      <div class="seed-body">
+        이번 주 가장 선명하게 반복된 단어는 <em>독립</em>이었다.
+        부채감이 아니라 사랑으로 서겠다는 말.
+        디퍼 별지기가 아니라 포근나루별의 별지기로.<br /><br />
+        일리아스 토론에서 건진 이미지가 있다.
+        인간은 세 번 시도하고 실패하다가 네 번째에 신의 뜻대로 이루어진다는 것.
+        이번 주 글들이 꼭 그 모습이었다 — 무너지고 자책하고 기도하고,
+        그래도 결심 하나를 조용히 쌓았다.<br /><br />
+        그 이야기를 글로 써보면 어떨까.
+        세 번 넘어지는 장면들을, 그리고 네 번째의 조용한 결심을.
+        선릿모닝이 그 첫 걸음이 되어줄 것이다.
+      </div>
+    </div>
+
+    <a class="back-link" href="index.html">← 회고 목록으로</a>
+
+    <footer>
+      <div class="footer-logo">포근나루</div>
+      <div class="footer-tagline">고요히, 마음에 머무는 글.</div>
+    </footer>
+
+  </main>
+</body>
+</html>
