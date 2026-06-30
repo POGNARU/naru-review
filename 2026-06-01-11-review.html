@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+  <title>6월 첫째·둘째 주 회고 · 포근나루 모닝페이지</title>
+  <meta name="description" content="2026년 6월 1–11일, 일곱 새벽의 문장을 돌아보는 주간 창작 회고." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Gowun+Dodum&family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --cream: #FAF3EA;
+      --apricot: #F5EBE0;
+      --terracotta-light: #C8845A;
+      --terracotta-deep: #C4763A;
+      --dark-brown: #3C2415;
+      --brown-soft: rgba(60, 36, 21, 0.62);
+      --brown-faint: rgba(60, 36, 21, 0.40);
+      --font-title: "Gowun Batang", serif;
+      --font-body: "Nanum Myeongjo", serif;
+      --font-sub: "Gowun Dodum", sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--dark-brown);
+      background:
+        radial-gradient(120% 90% at 50% -10%, #FFFBF5 0%, var(--cream) 46%, #F3E7D8 100%);
+      min-height: 100vh;
+      line-height: 1.9;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    .page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: clamp(56px, 11vw, 120px) clamp(22px, 6vw, 40px) 100px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: clamp(52px, 10vw, 90px);
+    }
+
+    .kicker {
+      font-family: var(--font-sub);
+      font-size: 0.78rem;
+      letter-spacing: 0.46em;
+      text-transform: uppercase;
+      color: var(--terracotta-deep);
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: rise 0.9s ease forwards;
+    }
+
+    h1 {
+      font-family: var(--font-title);
+      font-weight: 700;
+      font-size: clamp(1.9rem, 6vw, 2.9rem);
+      letter-spacing: 0.01em;
+      line-height: 1.32;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: rise 0.9s ease 0.12s forwards;
+    }
+
+    .subtitle {
+      font-family: var(--font-body);
+      font-size: clamp(0.96rem, 2.5vw, 1.08rem);
+      color: var(--brown-soft);
+      opacity: 0;
+      animation: rise 0.9s ease 0.24s forwards;
+    }
+
+    .gradient-line {
+      width: clamp(140px, 38%, 220px);
+      height: 2px;
+      margin: 32px auto 0;
+      border-radius: 2px;
+      background: linear-gradient(90deg, var(--apricot) 0%, var(--terracotta-light) 50%, var(--dark-brown) 100%);
+      opacity: 0;
+      animation: widen 1.1s ease 0.34s forwards;
+    }
+
+    .date-bar {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: clamp(44px, 8vw, 68px);
+      opacity: 0;
+      animation: rise 0.9s ease 0.42s forwards;
+    }
+
+    .date-chip {
+      font-family: var(--font-sub);
+      font-size: 0.74rem;
+      letter-spacing: 0.12em;
+      color: var(--terracotta-deep);
+      background: rgba(200, 132, 90, 0.10);
+      border: 1px solid rgba(200, 132, 90, 0.22);
+      border-radius: 99px;
+      padding: 4px 14px;
+    }
+
+    .section-label {
+      font-family: var(--font-sub);
+      font-size: 0.78rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--terracotta-deep);
+      margin-bottom: 22px;
+      opacity: 0;
+      animation: rise 0.9s ease 0.52s forwards;
+    }
+
+    .timeline {
+      position: relative;
+      margin-bottom: 60px;
+      padding-left: 28px;
+      opacity: 0;
+      animation: rise 0.9s ease 0.58s forwards;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 7px;
+      top: 6px;
+      bottom: 6px;
+      width: 2px;
+      background: linear-gradient(180deg, var(--terracotta-light), var(--apricot));
+      border-radius: 2px;
+    }
+
+    .tl-item {
+      position: relative;
+      margin-bottom: 28px;
+    }
+
+    .tl-item::before {
+      content: "";
+      position: absolute;
+      left: -25px;
+      top: 7px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--terracotta-light);
+      border: 2px solid var(--cream);
+    }
+
+    .tl-day {
+      font-family: var(--font-sub);
+      font-size: 0.76rem;
+      letter-spacing: 0.14em;
+      color: var(--terracotta-deep);
+      margin-bottom: 5px;
+    }
+
+    .tl-text {
+      font-size: 1.01rem;
+      line-height: 1.82;
+      color: var(--dark-brown);
+    }
+
+    .quote-block {
+      background: var(--apricot);
+      border-left: 3px solid var(--terracotta-light);
+      border-radius: 0 14px 14px 0;
+      padding: 22px 26px;
+      margin: 0 0 18px;
+      opacity: 0;
+      animation: rise 0.9s ease 0.64s forwards;
+    }
+
+    .quote-block p {
+      font-family: var(--font-body);
+      font-size: 1.06rem;
+      line-height: 1.88;
+      color: var(--dark-brown);
+    }
+
+    .quote-source {
+      font-family: var(--font-sub);
+      font-size: 0.76rem;
+      color: var(--brown-faint);
+      margin-top: 10px;
+    }
+
+    .quotes-wrap {
+      margin-bottom: 52px;
+    }
+
+    .theme-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 52px;
+      opacity: 0;
+      animation: rise 0.9s ease 0.70s forwards;
+    }
+
+    .theme-tag {
+      font-family: var(--font-sub);
+      font-size: 0.85rem;
+      color: var(--dark-brown);
+      background: rgba(200, 132, 90, 0.12);
+      border: 1px solid rgba(200, 132, 90, 0.26);
+      border-radius: 99px;
+      padding: 6px 18px;
+    }
+
+    .seed-card {
+      background: var(--dark-brown);
+      color: var(--cream);
+      border-radius: 20px;
+      padding: clamp(28px, 6vw, 42px) clamp(26px, 6vw, 40px);
+      margin-bottom: 70px;
+      opacity: 0;
+      animation: rise 0.9s ease 0.76s forwards;
+    }
+
+    .seed-eyebrow {
+      font-family: var(--font-sub);
+      font-size: 0.74rem;
+      letter-spacing: 0.36em;
+      text-transform: uppercase;
+      color: var(--terracotta-light);
+      margin-bottom: 18px;
+    }
+
+    .seed-title {
+      font-family: var(--font-title);
+      font-weight: 700;
+      font-size: clamp(1.2rem, 3.8vw, 1.5rem);
+      line-height: 1.45;
+      margin-bottom: 16px;
+      color: var(--cream);
+    }
+
+    .seed-body {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.92;
+      color: rgba(250, 243, 234, 0.82);
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-sub);
+      font-size: 0.84rem;
+      letter-spacing: 0.08em;
+      color: var(--terracotta-deep);
+      text-decoration: none;
+      opacity: 0;
+      animation: rise 0.9s ease 0.82s forwards;
+      transition: gap 0.3s ease;
+    }
+
+    .back-link:hover { gap: 12px; }
+
+    footer {
+      margin-top: 80px;
+      padding-top: 36px;
+      border-top: 1px solid rgba(60, 36, 21, 0.12);
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-family: var(--font-title);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--dark-brown);
+      letter-spacing: 0.06em;
+      margin-bottom: 8px;
+    }
+
+    .footer-tagline {
+      font-family: var(--font-sub);
+      font-size: 0.78rem;
+      color: var(--brown-faint);
+      letter-spacing: 0.18em;
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes widen {
+      from { opacity: 0; transform: scaleX(0.3); }
+      to   { opacity: 1; transform: scaleX(1); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+        opacity: 1 !important;
+      }
+    }
+
+    @media (max-width: 460px) {
+      .date-bar { gap: 6px; }
+      .quote-block { padding: 18px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+
+    <header>
+      <div class="kicker">Review · 2026. 6. 1–11</div>
+      <h1>쉬기로 했는데,<br />손이 먼저 움직였다</h1>
+      <p class="subtitle">6월 첫째·둘째 주 모닝페이지 창작 회고</p>
+      <div class="gradient-line"></div>
+    </header>
+
+    <div class="date-bar">
+      <span class="date-chip">6 · 1 월</span>
+      <span class="date-chip">6 · 2 화</span>
+      <span class="date-chip">6 · 5 금</span>
+      <span class="date-chip">6 · 5 금(2)</span>
+      <span class="date-chip">6 · 9 화</span>
+      <span class="date-chip">6 · 10 수</span>
+      <span class="date-chip">6 · 11 목</span>
+    </div>
+
+    <!-- 흐름 -->
+    <div class="section-label">열하루의 흐름</div>
+
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-day">월요일 · 6 / 1</div>
+        <div class="tl-text">
+          4주 휴식 중 두 주가 지났다. 전례부 활동을 쉬기로 했지만
+          마음 한쪽에는 자리를 잃을지 모른다는 불안이 깔려 있었다.
+          블랙아웃이 왔다 갔다 하는 새벽, 몽롱한 뇌 끝에서 흘러나온 글들 —
+          꿈인지 무의식인지 구분되지 않는 말들이 손끝을 타고 나왔다.
+          "나는 이 시간을 제대로 활용했다고 할 수 있나?" 라는 물음이 남았다.
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-day">화요일 · 6 / 2</div>
+        <div class="tl-text">
+          소라 작가님의 글에서 '붉은 벽돌로 쌓은 집'이라는 묘사를 마주했다.
+          내 글엔 형용사와 부사가 많고 감각적 묘사가 부족하다는 사실을 인정했다.
+          젠슨 황의 책에서는 사람을 소중히 여기는 마음을 건졌다.
+          포근나루는 1인이지만, 함께하는 사람들이 있다 — 그들을 소중히 대해야겠다는 다짐.
+          그리고 보험 상담을 다녀온 뒤, 있는 것에 감사하는 기도로 마무리했다.
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-day">금요일 · 6 / 5 (몽롱쓰기)</div>
+        <div class="tl-text">
+          빗소리와 새소리와 남편 출근 소리 — 아침의 소리들이 먼저 도착했다.
+          디퍼 논리 파트 강의 이후, 여전히 불안하다는 것을 솔직히 인정했다.
+          나루메모의 씨앗이 이날 심어졌다. 빠르게 열고, 분류 없이 적고,
+          나중에 찾을 수 있는 메모앱에 대한 필요가 선명하게 떠올랐다.
+          성경필사 책 아이디어도 솟아올랐다. 그리고 감사 기도로 끝맺었다.
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-day">금요일 · 6 / 5 (디퍼 이후)</div>
+        <div class="tl-text">
+          GEB(괴델, 에셔, 바흐)를 읽기 시작했다. 뫼비우스의 띠, 에셔의 계단,
+          바흐의 푸가로 의식의 층위를 탐구하는 책 — 존재와 무와는 다른 결로 끌렸다.
+          "내 생각을 글로서 표현하는 일을 자유롭게 해내고 싶다. 숨쉬듯 자연스럽게."
+          이 한 문장이 이날의 전부였다.
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-day">화요일 · 6 / 9</div>
+        <div class="tl-text">
+          하루 종일 잠을 잤다. 몸이 쉬려는 건지, 회피하려는 건지 몰랐다.
+          낮잠 중 꾼 꿈 — 버스를 놓치고 오르막을 오르며 호흡곤란을 겪는 꿈.
+          무의식이 보낸 경고였다. 숫자 9와 8, 버스기사의 테스트, 혼자 길에 남겨진 장면들.
+          꿈을 해석하고 나서야 지금 얼마나 무리한 일정으로 돌아가려 했는지가 보였다.
+          아이에게 엄마가 필요한 시간을 놓쳤다는 미안함도 함께.
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-day">수요일 · 6 / 10</div>
+        <div class="tl-text">
+          클로드 코드와 함께 선릿모닝 준비를 본격적으로 시작했다.
+          등대·새벽·윤슬이 분업해 기획서와 홍보 문구를 뽑았다.
+          그러나 그날 새벽 3시에 잠들고 5시 40분에 일어났다.
+          "나의 수면 장애는 스스로 초래한 악몽이다" — 스스로 수면박탈을 초래하고 있다는 것을
+          이날 처음으로 명확히 인정했다. 자제력의 문제가 아니라, 자고 싶은 욕구를 무시한 것.
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-day">목요일 · 6 / 11</div>
+        <div class="tl-text">
+          처음으로 포근한 글쓰기로 몽롱쓰기를 했다. 내가 만들고 쓰지 않고 있었다는 것을 깨달았다.
+          AI와의 관계에 대한 긴 사유 — 바다는 파트너인가, 도구인가.
+          그러면서 자신의 문체에 대한 질문이 올라왔다.
+          "AI가 분석하는 서정성이라는 건, 내가 기입한, 내가 닮고 싶어하는 것을 기준으로
+          고정한 기준이 아닐까?" — 그래서 이제는 자기 색으로 써보겠다고 결심했다.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 새벽이 남긴 문장들 -->
+    <div class="section-label">새벽이 남긴 문장들</div>
+
+    <div class="quotes-wrap">
+      <div class="quote-block">
+        <p>
+          "내 생각을 글로서 표현하는 일을 자유롭게 해내고 싶다.<br />
+          숨쉬듯 자연스럽게."
+        </p>
+        <div class="quote-source">260605 금요일 · GEB를 읽고</div>
+      </div>
+
+      <div class="quote-block">
+        <p>
+          "나의 수면 장애는 스스로 초래한 악몽이다.<br />
+          자고 싶은 욕구를 무시했던 거다."
+        </p>
+        <div class="quote-source">260610 수요일</div>
+      </div>
+
+      <div class="quote-block">
+        <p>
+          "클레이 키건과 아니 에르노, 필립 베송은<br />
+          내가 닮고 싶은 존경하는 작가들이지,<br />
+          내가 그 문체로 써야 하는 건 아니다."
+        </p>
+        <div class="quote-source">260610 수요일</div>
+      </div>
+
+      <div class="quote-block">
+        <p>
+          "몽롱쓰기를 하는 이 순간이 정말 소중하다.<br />
+          오타가 난무해도 좋다. 다 흘려보내고 —<br />
+          바다를 통해 분석할 수 있는 내 마음의 지도가 될 것이다."
+        </p>
+        <div class="quote-source">260611 목요일</div>
+      </div>
+    </div>
+
+    <!-- 이 시기의 결 -->
+    <div class="section-label">이 시기의 결</div>
+
+    <div class="theme-grid">
+      <span class="theme-tag">4주 휴식</span>
+      <span class="theme-tag">수면박탈</span>
+      <span class="theme-tag">묘사하는 글쓰기</span>
+      <span class="theme-tag">나루메모 탄생</span>
+      <span class="theme-tag">GEB · 의식의 층위</span>
+      <span class="theme-tag">꿈 해석</span>
+      <span class="theme-tag">선릿모닝 준비</span>
+      <span class="theme-tag">문체 정체성</span>
+      <span class="theme-tag">AI와의 관계</span>
+      <span class="theme-tag">감사와 기도</span>
+    </div>
+
+    <!-- 씨앗 -->
+    <div class="seed-card">
+      <div class="seed-eyebrow">이 시기의 씨앗</div>
+      <div class="seed-title">손이 먼저 알고 있었다</div>
+      <div class="seed-body">
+        6월 내내 쉬겠다고 마음먹었다. 그런데 손은 멈추지 않았다.
+        나루메모 아이디어를 꺼내고, 선릿모닝 기획을 시작하고,
+        포근한 글쓰기로 처음 몽롱쓰기를 했다.<br /><br />
+        이 열하루 동안 가장 반복된 질문은 하나였다.
+        <em>이게 정말 내 것인가.</em>
+        묘사는 내 것인가, 서정성은 내 것인가, 문체는 내 것인가,
+        AI가 분석한 나는 내 것인가.<br /><br />
+        답은 6/11에 조용히 왔다.
+        "부족함을 부끄러워 말자. 그래도 나는 발전할 가능성이 많으니까."
+        쉬기로 한 달에, 가장 많은 것을 만들기 시작한 달.
+        이 모순 속에서 몽롱쓰기는 배설이 아닌
+        내 마음의 지도가 되어가고 있었다.
+      </div>
+    </div>
+
+    <a class="back-link" href="index.html">← 회고 목록으로</a>
+
+    <footer>
+      <div class="footer-logo">포근나루</div>
+      <div class="footer-tagline">고요히, 마음에 머무는 글.</div>
+    </footer>
+
+  </main>
+</body>
+</html>

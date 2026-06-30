@@ -22,13 +22,18 @@
 ## 파일 구조
 
 ```
-index.html              # 회고 목록 허브 (다크브라운 글로시 바탕)
-2026-04-review.html     # 4월 월간 회고 — 연두 테마
-2026-05-review.html     # 5월 월간 회고 — 하늘 테마
-2026-06-review.html     # 6월 월간 회고 — 튤립 테마
-robots.txt              # 전체 크롤링 차단
-_local_originals/       # (git 제외) 민감 내용 포함 원본 + 주간회고 보관
+index.html                  # 회고 목록 허브 (다크브라운 글로시 바탕)
+2026-04-review.html         # 4월 월간 회고 — 연두 테마
+2026-05-review.html         # 5월 월간 회고 — 하늘 테마
+2026-06-review.html         # 6월 월간 회고 — 튤립 테마
+2026-06-01-11-review.html   # 6월 첫째·둘째 주 회고
+2026-06-20-week-review.html # 6월 셋째 주 회고
+2026-06-26-week-review.html # 6월 넷째 주 회고
+robots.txt                  # 전체 크롤링 차단
+_local_originals/           # (git 제외) 민감 내용 포함 원본 보관 (로컬+OneDrive 전용)
 ```
+
+주간회고도 공개판은 제3자 실명·사생활을 넣지 않으며, 월간과 동일하게 noindex를 적용한다.
 
 각 월간 회고는 **그래프 시각화 + 텍스트 분석을 한 장에 합본**한다:
 
