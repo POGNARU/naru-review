@@ -1,2 +1,6 @@
 _local_originals/
 *.backup-*.html
+
+# 바탕화면 바로가기용 로컬 아이콘 (웹사이트 아님)
+_naru-review-icon.ico
+_naru-review-icon-preview.png
