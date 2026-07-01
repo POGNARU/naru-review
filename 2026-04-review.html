@@ -13,6 +13,8 @@
     /* 4월 테마 — 맑은 연둣빛(봄·새싹) · 당월색 */
     --cur:#74AE2E; --cur-deep:#4A7611; --cur-bright:#93C93A;
     --cur-soft:#DDF0BA; --cur-mist:#F2F8E4;
+    /* 비교 전월색 — 3월 개나리 */
+    --prev:#E6AE1C; --prev-deep:#9A6B05;
     --ink:#243010; --ink-soft:rgba(36,48,16,.66); --ink-faint:rgba(36,48,16,.42);
     --joy:#13A07C; --tired:#E85636; --reflect:#7C5CE7;
     --card:#FFFFFF; --line:rgba(74,118,17,.16);
@@ -105,7 +107,7 @@
     <div class="gline"></div>
   </header>
 
-  <div class="note">글쓰기 시간·키워드 빈도는 글에 적힌 <b>실제 수치</b>이고, 감정 점수(0–10)와 주제 비중은 클로드가 글을 읽으며 매긴 <b>정성적 해석</b>이에요. 4월은 손글씨 모닝페이지를 시작한 첫 달이라, 시간이 적히지 않고 글자 수만 기록된 날도 있어요(시간 막대에선 빈칸).</div>
+  <div class="note">글쓰기 시간·키워드 빈도는 글에 적힌 <b>실제 수치</b>이고, 감정 점수(0–10)와 주제 비중은 클로드가 글을 읽으며 매긴 <b>정성적 해석</b>이에요. 4월은 손글씨 모닝페이지를 시작한 첫 달이라, 시간이 적히지 않고 글자 수만 기록된 날도 있어요(시간 막대에선 빈칸). (전월 3월과 비교해요.)</div>
 
   <div class="stats">
     <div class="stat"><div class="v">20일</div><div class="l">기록한 날</div></div>
@@ -145,18 +147,18 @@
   </div>
 
   <div class="card">
-    <div class="sec-head"><span class="sec-no">03</span><span class="sec-title">반복 키워드</span><span class="sec-sub">등장한 날 수</span></div>
-    <p class="cap">4월 20편 중 각 주제가 등장한 날 (정성 코딩)</p>
-    <svg id="kwChart" viewBox="0 0 920 470" role="img" aria-label="4월 키워드 등장일수 막대 차트"></svg>
-    <div class="insight">첫 달의 무게중심은 단연 <b>'일·포근나루'와 '신앙'(각 17일)</b>이에요. 출판사를 세우고 책을 만드는 흥분, 그리고 글 끝마다 이어지는 감사기도 — 4월의 글은 <i>일의 들뜸과 신앙의 감사</i>가 양손을 잡고 가요. '수면·불면'(11일)은 아직 배경이지만, 5월에 1위로 올라설 씨앗이 여기 있어요.</div>
+    <div class="sec-head"><span class="sec-no">03</span><span class="sec-title">반복 키워드</span><span class="sec-sub">등장한 날 수 · 3월 vs 4월</span></div>
+    <p class="cap"><span style="color:var(--prev-deep)">■ 3월(개나리)</span> &nbsp; <span style="color:var(--cur-deep)">■ 4월(연두)</span></p>
+    <svg id="kwChart" viewBox="0 0 920 470" role="img" aria-label="3월과 4월 키워드 등장일수 비교 막대 차트"></svg>
+    <div class="insight">3월 1위였던 '글쓰기·퇴고'(15일)가 4월엔 '글쓰기·문체'(8일)로 절반 넘게 줄고, 그 자리를 <b>'일·포근나루'와 '신앙'(각 13→17일)</b>이 치고 올라와요. 출판사를 세우고 책을 만드는 흥분, 그리고 글 끝마다 이어지는 감사기도 — 퇴고에 몰두하던 3월이 결실을 맺고 자축하는 4월로 이어져요. '가족'(7→13일)도 크게 늘었고, '수면·불면'(11일, 3월과 동일)은 아직 배경이지만 5월에 1위로 올라설 씨앗이 여기 있어요.</div>
   </div>
 
   <div class="card">
     <div class="sec-head"><span class="sec-no">04</span><span class="sec-title">주제 비중</span><span class="sec-sub">정성 추정 · 합 100%</span></div>
-    <p class="cap">4월 기록 전체에서 각 주제가 차지한 비율</p>
-    <svg id="donutChart" viewBox="0 0 360 260" role="img" aria-label="4월 주제 비중 도넛 차트"></svg>
+    <p class="cap"><span style="color:var(--prev-deep)">3월(개나리)</span> &nbsp;→&nbsp; <span style="color:var(--cur-deep)">4월(연두)</span> 변화</p>
+    <svg id="donutChart" viewBox="0 0 640 260" role="img" aria-label="3월과 4월 주제 비중 도넛 차트 두 개"></svg>
     <div class="lg-sq" id="donutLegend"></div>
-    <div class="insight"><b>'일·사업'이 28%로 압도적 1위</b>예요 — 포근나루를 막 띄운 달답게 글의 4분의 1 이상이 출판·창업 이야기. '건강·수면'(20%)이 그 뒤를 따르는데, 5월엔 이 둘의 순위가 뒤집혀요.</div>
+    <div class="insight">3월부터 이미 1위였던 <b>'일·사업'이 28%를 그대로 지켜요</b> — 퇴고하던 손이 출판사 대표의 손으로 그대로 이어진 셈. 3월 2위였던 '글쓰기·창작'(22→8%)은 크게 내려오고, 그 자리를 <b>'건강·수면'(12→20%)</b>과 '관계·사회'(5→10%)가 채워요. 퇴고라는 '만드는 일'에서 창업이라는 '벌이는 일'로 무게중심이 옮겨간 한 달이에요.</div>
   </div>
 
   <div class="card">
@@ -185,10 +187,10 @@
   </div>
 
   <div class="card">
-    <div class="sec-head"><span class="sec-no">07</span><span class="sec-title">문체 관찰</span><span class="sec-sub">첫 달의 결</span></div>
+    <div class="sec-head"><span class="sec-no">07</span><span class="sec-title">문체 관찰</span><span class="sec-sub">3월과 달라진 것</span></div>
     <div class="obs">
       손글씨 모닝페이지를 시작한 첫 달이에요. 글 끝마다 <b>긴 감사기도가 규칙적으로</b> 붙고, 느낌표와 생기 넘치는 구어("아자아자 파이팅", "감사합니다 하느님!")가 많아요 — 창업의 들뜸이 문장 곳곳에서 튀어요. 동시에 한 대표와의 불편함을 '경고등'이라는 자기 신호로 처음 길게 적기 시작하고, 에픽테토스·고백록 토론을 자기 경험으로 끌어와 사유하는 힘(4/20)이 돋보여요.
-      <div class="delta">↓ 5월로 가는 길목: '들뜬 창업기'의 환한 문장이 5월의 '버티는 자의 문장'으로 옮겨가요. 4월은 그 모든 것의 출발점이에요.</div>
+      <div class="delta">↑ 3월 대비: 3월이 밤샘 퇴고로 몰아붙인 <b>'실행하는 사람의 일지'</b>였다면, 4월은 그 실행이 열매를 맺어 <b>'자축하는 사람의 문장'</b>으로 옮겨가요. 동사도 등록하다·신청하다에서 감사하다·기뻐하다로 밝아지고요. 다만 3월 끝(3/26)의 외로움처럼, 4월도 한 대표와의 불편함이라는 그림자를 함께 데려가요. ↓ 5월로 가는 길목: 이 '들뜬 창업기'의 환한 문장은 5월의 '버티는 자의 문장'으로 다시 옮겨가요.</div>
     </div>
   </div>
 
@@ -273,7 +275,8 @@
   var joy=[6,9,7,7,3,3,4,3,6,6,4,3,4,5,5,6,5,8,5,7];
   var tired=[4,2,3,4,5,4,6,8,6,3,7,8,9,6,4,7,5,5,7,4];
   var reflect=[6,5,4,5,6,7,4,4,7,3,8,5,5,6,6,6,7,8,5,7];
-  var C={joy:'#13A07C',tired:'#E85636',reflect:'#7C5CE7',cur:'#74AE2E',curd:'#4A7611',grid:'#E5EFD3',ink:'#69774f'};
+  var C={joy:'#13A07C',tired:'#E85636',reflect:'#7C5CE7',prev:'#E6AE1C',prevd:'#9A6B05',cur:'#74AE2E',curd:'#4A7611',grid:'#E5EFD3',ink:'#69774f'};
+  var prevShades=['#7A5206','#9A6B05','#C28E0E','#E6AE1C','#F1C745','#F8DE86','#FCEFC0'];
   var curShades=['#33500B','#4A7611','#639A1A','#74AE2E','#97C952','#BCDD8C','#DDF0BA'];
   var NS='http://www.w3.org/2000/svg';
   function el(n,a){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);return e;}
@@ -319,35 +322,41 @@
 
   (function(){
     var svg=document.getElementById('kwChart');
-    var data=[['일·포근나루',17],['신앙·기도',17],['가족',13],['수면·불면',11],['죄책감·책임',9],['돈·수익화',9],['글쓰기·문체',8],['독서·토론',7],['AI·콘텐츠',7],['멘토·관계',6],['꿈',2]];
-    var L=150,R=900,T=14,maxV=18,rowH=40,bh=17;
+    var data=[['일·포근나루',13,17],['신앙·기도',13,17],['가족',7,13],['수면·불면',11,11],['죄책감·책임',7,9],['돈·수익화',9,9],['글쓰기·문체',15,8],['독서·토론',9,7],['AI·콘텐츠',12,7],['멘토·관계',6,6],['꿈',6,2]];
+    var L=150,R=900,T=14,maxV=18,rowH=40,bh=13;
     var x=function(v){return L+(R-L)*v/maxV;};
     for(var i=0;i<data.length;i++){
       var cy=T+rowH*i+rowH/2,d=data[i];
-      svg.appendChild(txt(L-12,cy+5,d[0],{'font-size':13,fill:'#3d4f1a','text-anchor':'end','font-family':'Gowun Dodum'}));
-      svg.appendChild(el('rect',{x:L,y:cy-bh/2,width:Math.max(x(d[1])-L,2),height:bh,rx:3,fill:C.cur}));
-      svg.appendChild(txt(x(d[1])+6,cy+5,d[1],{'font-size':11,fill:C.curd,'font-family':'Gowun Dodum'}));
+      svg.appendChild(txt(L-12,cy-4,d[0],{'font-size':13,fill:'#3d4f1a','text-anchor':'end','font-family':'Gowun Dodum'}));
+      svg.appendChild(el('rect',{x:L,y:cy-bh-3,width:Math.max(x(d[1])-L,2),height:bh,rx:3,fill:C.prev}));
+      svg.appendChild(txt(x(d[1])+5,cy-3,d[1],{'font-size':10.5,fill:C.prevd,'font-family':'Gowun Dodum'}));
+      svg.appendChild(el('rect',{x:L,y:cy+3,width:Math.max(x(d[2])-L,2),height:bh,rx:3,fill:C.cur}));
+      svg.appendChild(txt(x(d[2])+5,cy+13,d[2],{'font-size':10.5,fill:C.curd,'font-family':'Gowun Dodum'}));
     }
   })();
 
   (function(){
     var svg=document.getElementById('donutChart');
-    var topics=[['일·사업',28],['건강·수면',20],['신앙·영성',16],['가족',12],['관계·사회',10],['글쓰기·창작',8],['독서·학습',6]];
-    var cx=180,cy=130,rO=90,rI=52,total=100,ang=-Math.PI/2;
-    topics.forEach(function(t,k){
-      var frac=t[1]/total,a2=ang+frac*Math.PI*2,gp=0.012;
-      var aS=ang+gp,aE=a2-gp;
-      var x1=cx+rO*Math.cos(aS),y1=cy+rO*Math.sin(aS),x2=cx+rO*Math.cos(aE),y2=cy+rO*Math.sin(aE);
-      var x3=cx+rI*Math.cos(aE),y3=cy+rI*Math.sin(aE),x4=cx+rI*Math.cos(aS),y4=cy+rI*Math.sin(aS);
-      var large=(aE-aS)>Math.PI?1:0;
-      var d='M '+x1+' '+y1+' A '+rO+' '+rO+' 0 '+large+' 1 '+x2+' '+y2+' L '+x3+' '+y3+' A '+rI+' '+rI+' 0 '+large+' 0 '+x4+' '+y4+' Z';
-      svg.appendChild(el('path',{d:d,fill:curShades[k]}));
-      ang=a2;
-    });
-    svg.appendChild(txt(cx,cy-2,'4월',{'font-size':15,fill:'#243010','text-anchor':'middle','font-weight':700,'font-family':'Gowun Batang'}));
-    svg.appendChild(txt(cx,cy+17,'주제 비중',{'font-size':9,fill:C.ink,'text-anchor':'middle','font-family':'Gowun Dodum'}));
+    var topics=[['일·사업',28,28],['건강·수면',12,20],['신앙·영성',16,16],['가족',8,12],['관계·사회',5,10],['글쓰기·창작',22,8],['독서·학습',9,6]];
+    function donut(cx,cy,rO,rI,idx,shades,label){
+      var total=topics.reduce(function(s,t){return s+t[idx];},0),ang=-Math.PI/2;
+      topics.forEach(function(t,k){
+        var frac=t[idx]/total,a2=ang+frac*Math.PI*2,gp=0.012;
+        var aS=ang+gp,aE=a2-gp;
+        var x1=cx+rO*Math.cos(aS),y1=cy+rO*Math.sin(aS),x2=cx+rO*Math.cos(aE),y2=cy+rO*Math.sin(aE);
+        var x3=cx+rI*Math.cos(aE),y3=cy+rI*Math.sin(aE),x4=cx+rI*Math.cos(aS),y4=cy+rI*Math.sin(aS);
+        var large=(aE-aS)>Math.PI?1:0;
+        var d='M '+x1+' '+y1+' A '+rO+' '+rO+' 0 '+large+' 1 '+x2+' '+y2+' L '+x3+' '+y3+' A '+rI+' '+rI+' 0 '+large+' 0 '+x4+' '+y4+' Z';
+        svg.appendChild(el('path',{d:d,fill:shades[k]}));
+        ang=a2;
+      });
+      svg.appendChild(txt(cx,cy-2,label,{'font-size':14,fill:'#243010','text-anchor':'middle','font-weight':700,'font-family':'Gowun Batang'}));
+      svg.appendChild(txt(cx,cy+16,'주제 비중',{'font-size':9,fill:C.ink,'text-anchor':'middle','font-family':'Gowun Dodum'}));
+    }
+    donut(170,130,86,50,1,prevShades,'3월');
+    donut(470,130,86,50,2,curShades,'4월');
     var lg=document.getElementById('donutLegend');
-    topics.forEach(function(t,k){var s=document.createElement('span');s.innerHTML='<b style="background:'+curShades[k]+'"></b>'+t[0]+' '+t[1]+'%';lg.appendChild(s);});
+    topics.forEach(function(t,k){var s=document.createElement('span');s.innerHTML='<b style="background:'+curShades[k]+'"></b>'+t[0]+' '+t[1]+'→'+t[2]+'%';lg.appendChild(s);});
   })();
 })();
 </script>
